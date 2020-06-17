@@ -1,4 +1,4 @@
-package com.Stack;
+package com.tree;
 
 public class TraverseLeavesPrg {
 
