@@ -1,0 +1,14 @@
+OPTIONS ( ERRORS = 1000000 , SKIP=1)
+LOAD DATA 
+CHARACTERSET UTF8
+APPEND
+INTO TABLE FP_HCL_EXT
+FIELDS TERMINATED BY ',' 
+TRAILING NULLCOLS 
+(
+	Result_Time "trim(regexp_replace(:SUB_ASSET_CLASS, '[ ]{2,}', ' '))"
+	Granularity_Period "trim(regexp_replace(:SUB_ASSET_CLASS, '[ ]{2,}', ' '))"
+	Object_Name "trim(regexp_replace(:SUB_ASSET_CLASS, '[ ]{2,}', ' '))"
+	Cell ID "trim(regexp_replace(:SUB_ASSET_CLASS, '[ ]{2,}', ' '))"
+	CallAttemps "trim(regexp_replace(:SUB_ASSET_CLASS, '[ ]{2,}', ' '))"
+)
