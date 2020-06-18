@@ -20,7 +20,7 @@ fi
 clear
 echo   "
 	_____________________________________________________________
-	 "$(tput setaf 3) CBC $(tput setab 8) HCL FILE PROCESSING SYSTEM $(tput sgr 0)"  
+	 "$(tput setaf 3) HCL $(tput setab 8) FILE PROCESSING SYSTEM $(tput sgr 0)"  
 
 		OPTIONS    FILE_PROCESS_PROGRAM            STATUS
 	_______________________________________________________________
@@ -107,7 +107,7 @@ do
 			" >>$LOG_NAME
 
 		# Break if FAIL
-		if [ $opt = "A" -a $choice -le 19 -a $estatus = "1" ]
+		if [ $opt = "A" -a $choice -le 1 -a $estatus = "1" ]
 		then
 			tag=$( tail -n 1 $FILE_HOME/joblog )
 			echo $tag
